@@ -853,16 +853,41 @@ Example: `smiths-plumbing-austin-tx.html`
 
 ## FINAL QUALITY CHECK (Before saving any generated site)
 
+### Technical ✅
 - [ ] No `[PLACEHOLDER]` brackets anywhere in the HTML
 - [ ] Phone number is a `tel:` link everywhere it appears
-- [ ] Phone appears 4+ times
+- [ ] Phone appears 4+ times (nav, hero, CTA, footer)
+- [ ] Sticky mobile call bar is present
 - [ ] Mobile menu button works
-- [ ] All anchor links go to real section IDs
-- [ ] Form submit shows a friendly alert message
+- [ ] All anchor links go to real section IDs (`#services`, `#about`, etc.)
+- [ ] Form submit shows a friendly alert (or Formspree endpoint)
 - [ ] Tailwind CDN script is in `<head>`
 - [ ] Google Fonts loaded with preconnect
-- [ ] All sections present: Nav, Hero, Stats, Services, About, Why Us, Testimonials, FAQ, CTA, Contact, Footer
-- [ ] Smooth scroll enabled
-- [ ] Page looks stunning on mobile (mentally simulate 375px width)
-- [ ] Gradient matches the niche color palette
-- [ ] Fonts match the niche typography recommendation
+- [ ] LocalBusiness JSON-LD schema in `<head>`
+- [ ] Scroll reveal JS + counter JS present before `</body>`
+- [ ] Smooth scroll enabled (`html { scroll-behavior: smooth; }`)
+
+### Sections ✅
+- [ ] All 13 sections present: Nav, Hero, Stats, Services, About, Why Us, Testimonials, Service Area, FAQ, CTA, Contact, Footer, Sticky Mobile Bar
+
+### Design ✅
+- [ ] Gradient and colors match the niche palette from master-design.md
+- [ ] Font pairing matches the niche typography recommendation
+- [ ] Hero has trust badges + Google Reviews badge
+- [ ] Service cards have hover effect (`hover:-translate-y-1`)
+- [ ] Bento grid or stats bar uses animated counters
+- [ ] Looks stunning at 375px mobile width (mentally simulate)
+
+### Copy Quality ✅ (see copywriting.md)
+- [ ] H1 headline includes city + niche + outcome (not generic)
+- [ ] All service descriptions focus on customer benefit, not just feature name
+- [ ] About section tells a real story (or believable origin story)
+- [ ] Testimonials are specific (situation + outcome + name + location)
+- [ ] Every CTA uses action verb + benefit (not just "Submit" or "Contact Us")
+- [ ] No sentence passes the "So What?" test — every claim earns its place
+- [ ] Niche voice matches the industry (see copywriting.md voice guides)
+
+### Impression Test ✅
+- [ ] Would this site make the business owner say "wow"?
+- [ ] Does it look like it cost $3,000-5,000 to build?
+- [ ] Would you be proud to send this to a potential client?

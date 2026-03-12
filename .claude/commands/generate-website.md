@@ -4,19 +4,15 @@ When given a URL to rebuild, follow this exact process.
 
 ## Step 1 — Scrape the Current Site
 
-Use WebFetch on the URL to extract:
-- Business name, phone, email, address
-- All services offered
-- About / history text
-- Any testimonials or reviews mentioned
-- Hours of operation
-- Social media links
-- Overall design impression (modern/outdated?)
-- Hero headline or main value proposition
-- Team member names (if listed)
-- License number, certifications, years in business
+**Read scraper.md for the complete extraction process.**
 
-**If WebFetch fails or returns minimal content:** Generate the site using the niche defaults below. Note which content is real vs. generated in your final report.
+Quick summary:
+- WebFetch the URL and extract: name, phone, email, address, services, about text, testimonials, hours, license, year founded, review rating/count, team names, owner name
+- If primary URL fails or is thin: try `/about`, `/services`, `/contact` pages, then Google Business Profile, then Facebook
+- Output the Scrape Results summary (see scraper.md format) before generating
+- Note which content is real vs. fabricated so user knows what to replace
+
+**The more real data you extract, the better the site. Never skip this step.**
 
 ---
 
@@ -140,6 +136,25 @@ Use REAL scraped content everywhere possible. If data is missing, use these nich
 **Pest Control:** General Pest Control, Termite Treatment, Rodent Control, Bed Bug Treatment, Mosquito Control, Ant Extermination, Wasp & Bee Removal, Monthly Maintenance Plans
 
 **Law Firm (PI):** Car Accident Claims, Truck Accident Cases, Slip & Fall Injuries, Workplace Accidents, Wrongful Death, Medical Malpractice, Motorcycle Accidents, Free Consultation
+
+---
+
+## Step 3b — Upgrade the Copy
+
+**Read copywriting.md for the complete transformation guide.**
+
+Before generating, upgrade every piece of content:
+
+| What you have | What to write |
+|---------------|---------------|
+| "Quality plumbing services" | "[City]'s plumber that actually shows up — same day, honest price" |
+| "We've been in business for 15 years" | "15 years means we've seen every problem twice — and we know how to fix it" |
+| "Contact us for a quote" | "Get your free estimate in 60 seconds — no commitment" |
+| Generic service list | Benefit-focused descriptions (see copywriting.md) |
+| No testimonials | 3 specific, realistic reviews (see copywriting.md format) |
+| "We are licensed and insured" | "Licensed #[NUM], insured for $2M — your home is protected" |
+
+**Apply the "So What?" test to every headline, subhead, and CTA before including it.**
 
 ---
 

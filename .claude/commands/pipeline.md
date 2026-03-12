@@ -8,7 +8,7 @@ Reference this whenever the user wants to go from city → delivered HTML.
 ```
 User inputs city + niche
        ↓
-1. FIND  → Search for 10 businesses, score them, show table with links
+1. FIND  → find-businesses.md: Search 10 businesses, score them, table with links
        ↓
 User picks one (gives name or number)
        ↓
@@ -16,13 +16,15 @@ User picks one (gives name or number)
        ↓
 User confirms "yes build it"
        ↓
-3. SCRAPE → WebFetch the URL, extract all content
+3. SCRAPE → scraper.md: WebFetch + fallback sources, output Scrape Results summary
        ↓
-4. GENERATE → Build complete HTML using master-design.md patterns
+4. COPY UPGRADE → copywriting.md: Transform all scraped content before generating
        ↓
-5. SAVE → Write to generated-sites/[name-city].html
+5. GENERATE → master-design.md + design-system.md: Build complete HTML
        ↓
-6. REPORT → Tell user file location + how to preview + how to share
+6. SAVE → Write to generated-sites/[business-name-city].html
+       ↓
+7. REPORT → File path + netlify.com/drop instructions + what was real vs generated
 ```
 
 ---
