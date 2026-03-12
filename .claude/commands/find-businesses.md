@@ -73,14 +73,16 @@ For each result, find:
 
 When you have their URL, scan for these signals to detect platform:
 
-| Platform | Dead giveaway |
-|----------|--------------|
-| Wix | `.wixsite.com` in URL, or `wix-code` in source |
-| Squarespace | `/squarespace-static/` in source, or URLs ending in `.squarespace.com` |
-| GoDaddy | `secureserver.net` or `godaddy.com` references in source |
-| Weebly | `weeblysite.com` domain or `weebly.com` in source |
-| WordPress | `wp-content/plugins/` or `wp-json` in source |
-| Custom/Hand-coded | Clean HTML, none of the above |
+| Platform | How to Detect (View Source → Ctrl+F) | Pitch Angle |
+|----------|--------------------------------------|-------------|
+| **Wix** | `<meta name="wix-site-id">` OR `.wixsite.com` in URL | "Stop paying Wix monthly — own your site" |
+| **Squarespace** | `<meta name="generator" content="Squarespace">` | "Squarespace kills your SEO — here's proof" |
+| **GoDaddy Builder** | `<meta name="generator" content="Starfield Technologies; Go Daddy Website Builder">` | "GoDaddy builder ranks poorly on Google" |
+| **Weebly** | `weeblysite.com` in domain OR `weebly.com` scripts | "Weebly sites are getting penalized in 2025" |
+| **WordPress (old theme)** | `wp-content/` in source + old copyright year | "Your theme is hurting your conversions" |
+| **Custom / Unknown** | None of the above | Standard pitch |
+
+**Fastest check:** Right-click the page → View Page Source → Ctrl+F → type `generator`
 
 **Wix/Squarespace/GoDaddy = automatic +10 points on opportunity score** (they're paying monthly for a worse product)
 

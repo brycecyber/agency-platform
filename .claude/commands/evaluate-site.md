@@ -41,13 +41,15 @@ Knowing what platform they're on helps estimate build cost and pitch angle.
 
 | Platform | How to Detect | Pitch Angle |
 |----------|--------------|-------------|
-| **Wix** | URL contains `.wixsite.com` OR source has `wix-code` or `_wixCIDX` | "Your Wix site limits your SEO — here's what a custom site gets you" |
-| **Squarespace** | Source contains `squarespace.com/static` or `sqsp.net` | "Squarespace charges $25+/month — own your site instead" |
-| **GoDaddy Builder** | Source has `godaddy.com/website/builder` or `secureserver.net` | "GoDaddy builder sites rank poorly — here's proof" |
-| **Weebly** | Source has `weebly.com` or `weeblysite.com` | Same as above |
-| **Jimdo** | Source has `jimdo.com` or `jimdofree.com` | Same |
-| **WordPress (hosted)** | Source has `wp-content/` — note: WP sites need pitch adjusted | "Your WordPress site looks dated — here's a modern redesign" |
-| **Custom / Hand-coded** | None of the above, usually cleaner HTML | Standard pitch |
+| **Wix** | `<meta name="wix-site-id">` OR `.wixsite.com` in URL OR `wixWindow` in JS | "Your Wix site limits your SEO — here's what a custom site gets you" |
+| **Squarespace** | `<meta name="generator" content="Squarespace">` OR `assets.squarespace.com` in source | "Squarespace charges $25+/month — own your site instead" |
+| **GoDaddy Builder** | `<meta name="generator" content="Starfield Technologies; Go Daddy Website Builder">` | "GoDaddy builder sites rank poorly on Google — here's proof" |
+| **Weebly** | `weeblysite.com` in domain OR `weebly.com` in source scripts | Same as above |
+| **Jimdo** | `jimdofree.com` domain OR `jimdo.com` in source | Same |
+| **WordPress** | `wp-content/` in source OR `/wp-json` endpoint | "Your WordPress theme is outdated — here's a modern redesign" |
+| **Custom / Hand-coded** | None of the above, cleaner HTML structure | Standard pitch |
+
+**How to check:** Right-click → View Page Source → Ctrl+F → search for `generator` or `wix-site-id`
 
 ---
 

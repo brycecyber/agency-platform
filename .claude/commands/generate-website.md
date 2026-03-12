@@ -187,43 +187,44 @@ Build the full single-file website using the components in design-system.md and 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 
-<!-- Local Business Schema -->
+<!-- Local Business Schema — validated format (Google Rich Results) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "[ServiceType]",
+  "@id": "[WEBSITE_URL]#business",
   "name": "[BUSINESS NAME]",
+  "description": "[BUSINESS DESCRIPTION]",
+  "url": "[WEBSITE_URL]",
   "telephone": "[PHONE]",
   "email": "[EMAIL]",
-  "url": "[WEBSITE_URL]",
+  "image": "[HERO_IMAGE_URL]",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "[ADDRESS]",
     "addressLocality": "[CITY]",
-    "addressRegion": "[STATE]",
+    "addressRegion": "[STATE_ABBR]",
     "postalCode": "[ZIP]",
     "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "[LAT]",
-    "longitude": "[LNG]"
   },
   "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
   "priceRange": "$$",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "[RATING]",
-    "reviewCount": "[REVIEW_COUNT]"
+    "reviewCount": "[REVIEW_COUNT]",
+    "bestRating": "5",
+    "worstRating": "1"
   },
   "areaServed": {
     "@type": "City",
     "name": "[CITY]"
-  },
-  "description": "[BUSINESS DESCRIPTION]"
+  }
 }
 </script>
 ```
+
+**Validate the schema** at: search.google.com/test/rich-results (paste the HTML, check for errors)
 
 **@type by niche:**
 - Plumber → `Plumber`

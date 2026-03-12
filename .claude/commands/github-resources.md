@@ -93,15 +93,20 @@ Since generated sites have no backend, use one of these for real form submission
 ### Formspree (Best — free tier, easiest setup)
 ```html
 <!-- Replace the onsubmit alert with this for real form submission -->
+<!-- All inputs MUST have name="" attributes for Formspree to capture them -->
 <form action="https://formspree.io/f/[FORM_ID]" method="POST">
   <input type="hidden" name="_subject" value="New quote request from [BUSINESS NAME] website">
-  <!-- ...form fields... -->
+  <input type="text" name="name" required placeholder="Your Name">
+  <input type="tel" name="phone" required placeholder="Phone Number">
+  <select name="service"><option>Select a service...</option></select>
+  <textarea name="message" placeholder="Details..."></textarea>
   <button type="submit">Get My Free Quote →</button>
 </form>
 ```
-- Free tier: 50 submissions/month, no account needed to test
-- Get form ID at formspree.io — takes 2 minutes
-- Sends email directly to the business owner
+- **Free tier: 50 submissions/month**
+- **Requires account:** Sign up free at formspree.io → "+ New Form" → set recipient email → get form ID
+- Form ID looks like `mqldaqwx` → full action URL: `https://formspree.io/f/mqldaqwx`
+- SPAM filtering built in — no extra setup needed
 
 ### Netlify Forms (if deploying to Netlify)
 ```html
