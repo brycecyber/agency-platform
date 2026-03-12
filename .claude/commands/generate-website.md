@@ -33,6 +33,62 @@ Based on the business niche, choose from master-design.md color palette:
 | Real Estate/Finance | Indigo + violet | DM Serif Display |
 | Veterinarian | Violet + emerald | Nunito |
 
+### Niche Design Direction (What Combination to Use)
+
+Each niche has a specific "feel" — match it:
+
+**Plumbers:**
+- Hero: Dark gradient (blue-900 → blue-800), NOT light/white
+- Accent buttons: Orange (urgency, action)
+- Effects: Shimmer on primary CTA, blob behind hero, animated counters
+- Mood: Reliable, urgent, available 24/7 — like calling a dependable friend at 2am
+
+**HVAC:**
+- Hero: Bold red gradient or dark blue gradient (seasonal split — summer=cool blue, winter=warm red)
+- Effects: Animated gradient hero, stats bar with counters, shimmer CTA
+- Mood: Technical authority + emergency availability
+
+**Electricians:**
+- Hero: Near-black (#111827) with yellow accent — electric, powerful
+- Effects: Subtle dot grid background on services section, yellow glows on CTAs
+- Mood: Precise, professional, safety-focused — not flashy
+
+**Roofers:**
+- Hero: Earth tone gradient (amber-800 → stone-900), bold Oswald headings
+- Unique section: Before/after slider for project showcase
+- Mood: Rugged craftsmanship, storm damage urgency, protection
+
+**Dentists:**
+- Hero: Light/white-first (NOT dark) with cyan accents
+- Effects: Soft shadows (no harsh dark backgrounds), gentle fade-ins
+- Unique: New patient special offer prominently displayed
+- Mood: Clean, calming, professional, no fear — welcoming
+
+**Chiropractors:**
+- Hero: Teal gradient, clean layout
+- Unique: Progress bars for "Customer Satisfaction 98%" in about section
+- Mood: Healing, health, relief from pain
+
+**Landscapers:**
+- Hero: Rich green gradient, outdoor photography
+- Effects: Floating animation on hero icons, bright lime accent
+- Mood: Vibrant, natural, outdoor pride
+
+**Law Firms:**
+- Hero: Deep navy + gold, Playfair Display serif font, minimal animation
+- AVOID: Excessive effects, playful animations
+- Mood: Authoritative, professional, fighting for justice
+
+**Auto Repair:**
+- Hero: Dark (#1f2937) with orange accent, Barlow Condensed headings
+- Unique: Trust badges (ASE certified, warranty, written estimates) very prominent
+- Mood: Honest, blue-collar, no-nonsense
+
+**Pest Control:**
+- Hero: Dark green + red accent (danger/elimination theme)
+- Unique: "Guaranteed results" banner above fold
+- Mood: Precision, problem elimination, peace of mind
+
 ---
 
 ## Step 2b — Image Strategy
