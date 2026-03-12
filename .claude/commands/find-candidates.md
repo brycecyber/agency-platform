@@ -1,62 +1,97 @@
-# Find Website Candidates
+# Find Website Candidates — Quick Reference
 
-You are a local business analyst helping identify which businesses are the best candidates for a new AI-generated website.
+Use this as a cheat sheet for identifying and qualifying targets.
+For the full discovery workflow, see find-businesses.md.
+For detailed scoring, see evaluate-site.md.
 
-## What makes a GREAT candidate:
+---
 
-**High Priority (Score these higher):**
-- Website looks like it was built in 2008-2015 (tables-based layout, no mobile responsiveness)
+## What Makes a GREAT Candidate (Quick Checklist)
+
+✅ High Priority — Score these higher:
+- Website looks like it was built before 2018 (no flexbox, tables-based layout, no mobile responsiveness)
 - No SSL certificate (http:// not https://)
-- Website takes more than 4 seconds to load
-- Missing basic sections: no contact form, no testimonials, no services list
+- Site is on Wix, Squarespace, or GoDaddy builder (paying monthly for an inferior product)
+- Missing conversion elements: no contact form, no testimonials, no phone in header
 - No Google Business Profile or incomplete one
-- Business has 4+ star rating but poor web presence (they have good service, just terrible marketing)
+- Business has 4+ star rating but poor web presence
 - 50+ Google reviews (established business, worth the investment)
-- Niches: plumbers, HVAC, electricians, roofers, landscapers, pest control, chiropractors, dentists
 
-**Medium Priority:**
-- Website exists but has zero personality or differentiation
-- Not showing up on Google Maps for their main service keyword
-- Website has broken images or links
-- No clear call-to-action above the fold
-- Stock photos that look generic
-- Law firms, accountants, insurance agents with template sites
+⚡ Best Niches (Highest ROI for a redesign):
+1. Plumbers — emergency calls = desperate callers lost by bad sites
+2. HVAC — seasonal urgency, high-ticket jobs
+3. Roofers — high ticket ($8k-$30k), old sites everywhere
+4. Dentists — high patient LTV, often on outdated templates
+5. Electricians — licensed trade, less competition in web design outreach
+6. Landscapers — extremely low web sophistication, easy to impress
+7. Pest Control — recurring revenue model, operators not tech-savvy
+8. Auto Repair — independent shops vs chains, old sites common
 
-**Lower Priority (harder to close):**
-- Large chains or franchises
-- Businesses with recently updated modern websites
-- Businesses that are part of a larger marketing group
+---
 
-## How to evaluate a URL:
+## Site Builder Quick-Detection
 
-When given a URL to evaluate, check:
-1. Does it load on mobile? (Check viewport meta tag)
-2. Is it HTTPS?
-3. Does it have a clear phone number visible?
-4. Does it have a services section?
-5. Does it have testimonials or reviews?
-6. When was it last updated? (Check footer copyright year)
-7. Google PageSpeed score mentally (does it feel fast?)
+Spot their platform in 10 seconds:
 
-## Discovery prompts to use:
+| What you see | Platform | Pitch angle |
+|-------------|----------|-------------|
+| `.wixsite.com` in URL, or `wix-code` in source | Wix | "Stop renting your website — own it" |
+| `squarespace.com` references in source | Squarespace | "Squarespace limits your SEO" |
+| `secureserver.net` or `godaddy.com` | GoDaddy Builder | "GoDaddy builder ranks poorly" |
+| `wp-content/` in source, outdated theme | WordPress | "Your WordPress theme is costing you leads" |
+| Clean HTML, none of the above | Custom/Unknown | Standard pitch |
 
-When searching for candidates in a city, try these searches in the dashboard:
-- "[niche] in [city]" — e.g., "plumbers in Austin TX"
-- Focus on cities with 50k-500k population for best density of small businesses
-- Prioritize cities where you have local knowledge or connections
+---
 
-## Red flags — skip these:
+## Red Flags — SKIP These
 
-- National chains (Roto-Rooter, Mr. Rooter, etc.)
-- Businesses with no website at all (harder to sell — they may not value web presence)
+- National chains (Roto-Rooter, Servpro, Aspen Dental, etc.)
+- Businesses with no website at all (harder pitch — they don't value web presence yet)
 - Recently funded or PE-backed businesses (they have marketing teams)
-- Businesses with Yelp ads (they're already spending on marketing)
+- Businesses with Yelp ads (they're already spending on digital marketing)
+- Sites that already look modern and professional — nothing to improve
 
-## Pitch framing when reaching out:
+---
 
-"I noticed your website at [URL] and built a free demo of what your site could look like with a modern redesign. No obligation — I just want to show you what's possible. Here's a link to preview it: [preview_url]"
+## The Perfect Prospect Profile
 
-This approach works because:
+```
+✓ Local, independent (not a franchise or chain)
+✓ In business 3+ years (proven, stable)
+✓ 4.0+ star rating on Google
+✓ 30+ Google reviews
+✓ Website is outdated (pre-2018 design), broken, or on Wix/GoDaddy
+✓ High-value niche (plumber, roofer, dentist, HVAC, electrician)
+✓ No clear CTA or phone number above fold on current site
+```
+
+Hit all 7? That's a HOT LEAD — build the site today.
+
+---
+
+## Pitch Framing
+
+When reaching out, lead with value already delivered:
+
+> "I noticed your website at [URL] and built a free demo of what your site could look like with a modern redesign. No obligation — I just want to show you what's possible.
+>
+> Here's the live preview: [Netlify URL]"
+
+This works because:
 1. You've already done the work (they can see the demo)
 2. Zero risk for them to look
-3. Builds immediate credibility
+3. Builds immediate credibility before asking for anything
+
+---
+
+## Seasonal Windows (Time Your Outreach)
+
+| Niche | Best Months | Why |
+|-------|------------|-----|
+| HVAC | March-April, Sept-Oct | Before summer/winter rush |
+| Landscaping | February-March | Before spring season |
+| Roofers | March-April, after storms | Storm season and spring |
+| Pest Control | March-May | Before pest season |
+| Plumbers | Year-round, spike winter | Frozen pipes in winter |
+| Accountants | October-January | Before tax season |
+| Dentists | January | New year, new insurance benefits |

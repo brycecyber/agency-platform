@@ -86,6 +86,67 @@
 
 ---
 
+## FORM SUBMISSION SERVICES (For static HTML sites)
+
+Since generated sites have no backend, use one of these for real form submissions:
+
+### Formspree (Best — free tier, easiest setup)
+```html
+<!-- Replace the onsubmit alert with this for real form submission -->
+<form action="https://formspree.io/f/[FORM_ID]" method="POST">
+  <input type="hidden" name="_subject" value="New quote request from [BUSINESS NAME] website">
+  <!-- ...form fields... -->
+  <button type="submit">Get My Free Quote →</button>
+</form>
+```
+- Free tier: 50 submissions/month, no account needed to test
+- Get form ID at formspree.io — takes 2 minutes
+- Sends email directly to the business owner
+
+### Netlify Forms (if deploying to Netlify)
+```html
+<form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+  <!-- ...fields... -->
+</form>
+```
+- Free with Netlify (100 submissions/month free tier)
+- Zero configuration — just add `data-netlify="true"`
+
+### Default Demo Mode (for client previews before they buy)
+```javascript
+onsubmit="event.preventDefault(); this.innerHTML='<p class=\'text-green-600 font-bold text-center py-8\'>✓ Thanks! We\'ll call you within 24 hours.</p>'"
+```
+
+---
+
+## LOCAL SEO QUICK REFERENCE
+
+### Schema.org Types by Niche
+| Niche | @type value |
+|-------|------------|
+| Plumber | `Plumber` |
+| HVAC | `HVACBusiness` |
+| Electrician | `Electrician` |
+| Roofer | `RoofingContractor` |
+| Dentist | `Dentist` |
+| Chiropractor / PT | `MedicalClinic` |
+| Auto Repair | `AutoRepair` |
+| Law Firm | `LegalService` |
+| Landscaping | `LandscapingBusiness` |
+| Pest Control | `PestControlService` |
+| Anything else | `LocalBusiness` |
+
+**Full schema template:** see `generate-website.md`
+
+### Core Web Vitals Targets (Google Ranking Factors)
+Our generated sites are built to hit these automatically:
+- **LCP:** < 2.5s ✓ (no heavy JS, no render-blocking scripts)
+- **CLS:** < 0.1 ✓ (explicit image dimensions)
+- **INP:** < 200ms ✓ (vanilla JS only, no frameworks)
+
+---
+
 ## AWWWARDS-WINNING DESIGN PRINCIPLES
 
 These are what separates a $200 site from a $10,000 site:

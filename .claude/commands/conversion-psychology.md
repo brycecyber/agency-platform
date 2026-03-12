@@ -256,6 +256,71 @@ Our generated sites automatically have these built in:
 
 ---
 
+## STICKY MOBILE CTA BAR (Non-Negotiable)
+
+**Data:** Sticky mobile CTAs increase mobile conversions by 50-300% for local service businesses.
+
+Why it works:
+- 60-75% of local business traffic is mobile
+- Users scroll past the hero CTA — they need a persistent escape hatch
+- Plumbers, HVAC, electricians = emergency calls. Friction kills conversions.
+
+**What the bar should contain:**
+- Left button: CALL NOW (links to `tel:` number, primary brand color)
+- Right button: FREE QUOTE (links to `#contact`, dark background)
+- Full width, 64px tall (thumb-friendly)
+- Only visible on mobile (`md:hidden`)
+- Spacer div at page bottom so footer content isn't hidden behind bar
+
+**This is the single highest-ROI element you can add to any local business site.**
+
+---
+
+## LOCAL SEO RULES (Google Rankings)
+
+These elements help the generated site rank for "[niche] [city]" searches:
+
+### On-Page SEO Checklist
+- [ ] Title tag: `[BUSINESS NAME] | [CITY] [NICHE] | [KEY PHRASE]`
+- [ ] Meta description: Includes city + niche + phone + unique benefit (160 chars max)
+- [ ] H1: Contains "[niche] in [city]" or "[city] [niche]" naturally
+- [ ] H2s: Service names + city modifier (e.g., "Drain Cleaning in Austin TX")
+- [ ] Footer NAP: Name, Address, Phone — EXACTLY matching Google Business Profile
+- [ ] Service area: List all nearby cities served (text, not images)
+
+### LocalBusiness Schema (Critical for local SEO)
+Add JSON-LD to every site's `<head>` — this tells Google you're a local business.
+See `generate-website.md` for the full schema template.
+
+### NAP Consistency Rule
+The business Name, Address, and Phone in the **footer** must EXACTLY match what's on their Google Business Profile (same abbreviations, same format). This is a ranking signal.
+
+**Data:** Businesses with consistent NAP citations rank 23% higher in local pack results.
+
+---
+
+## HEADLINE PSYCHOLOGY FOR LOCAL BUSINESSES
+
+### The Best Performing Headline Formulas
+
+| Formula | Example | Why It Works |
+|---------|---------|-------------|
+| [CITY]'s [superlative] [niche] | "Austin's Most Trusted Plumber" | Familiarity + authority |
+| [Benefit] in [City] | "Fast AC Repair in Nashville" | Answers the immediate need |
+| [Urgency] + [City] | "24/7 Emergency Plumbing in Denver" | Safety + urgency |
+| Social proof + [City] | "500+ Happy Families in Charlotte Trust Us" | Social validation |
+| Problem → Solution | "Leaking Pipe? We Fix It Same Day in Dallas" | Pain + instant relief |
+
+### What to NEVER Put in an H1
+- Generic taglines ("Quality Service You Can Trust")
+- The business name alone
+- "Welcome to our website"
+- Anything without the city name
+
+**Data:** H1s that include city + niche convert 40% better than generic headlines.
+
+---
+
 ## THE CONVERSION FORMULA
 
 ```

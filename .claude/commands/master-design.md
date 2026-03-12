@@ -758,6 +758,80 @@ document.addEventListener('mousemove', e => {
 
 ---
 
+## FAQ CONTENT BY NICHE
+
+Use these when building the FAQ section. Pick 6-8 per site. Always include the first 3 for any niche.
+
+### Universal FAQs (use on every site)
+1. **Do you offer free estimates?** → Yes, completely free with no obligation. Call or fill out the form.
+2. **Are you licensed and insured?** → Yes, fully licensed ([LICENSE #]) and insured for your protection.
+3. **What areas do you serve?** → [City] and surrounding areas including [list 4-6 nearby cities].
+4. **How quickly can you respond?** → We offer same-day and next-day service for most jobs. Emergency calls answered 24/7.
+5. **What payment methods do you accept?** → Cash, all major credit cards, and financing available.
+6. **What if I'm not satisfied?** → 100% satisfaction guarantee — we'll make it right or refund you.
+
+### Plumbing-Specific
+- "How much does drain cleaning cost?" → Typically $100-$300 depending on the clog. We give you a price before we start.
+- "Do you fix water heaters?" → Yes — repair and replacement for all brands and types (tank and tankless).
+- "Is there an after-hours emergency fee?" → We're available 24/7. We're honest about emergency rates upfront.
+- "How do I know if I have a slab leak?" → Signs include hot floors, sound of running water, or unexplained high water bills. Call us for a free inspection.
+
+### HVAC-Specific
+- "How often should I service my AC?" → Once per year minimum — ideally before summer. Saves money and prevents breakdowns.
+- "How long do AC units last?" → 15-20 years with proper maintenance. We'll tell you honestly when it's time to replace.
+- "Why is my AC blowing warm air?" → Common causes: low refrigerant, dirty filter, or compressor issue. We diagnose free.
+- "Do you offer maintenance plans?" → Yes — our annual plans save you money and extend your system's life.
+
+### Roofing-Specific
+- "Will my insurance cover roof replacement?" → Possibly — storm damage is usually covered. We help you through the claim process.
+- "How long does a roof replacement take?" → Most homes 1-3 days. We protect your property and clean up completely.
+- "What type of shingles do you recommend?" → Depends on budget and climate. We'll walk you through options at no charge.
+- "What's the difference between repair and replacement?" → We assess your roof honestly and only recommend replacement when necessary.
+
+### Dental-Specific
+- "Are you accepting new patients?" → Yes! New patients welcome. Call to schedule your first appointment.
+- "Do you accept my insurance?" → We accept most major dental insurance plans. Call us to verify your specific plan.
+- "Is dental care painful?" → We use modern techniques and anesthesia to keep you comfortable throughout.
+- "How often should I come in for cleanings?" → Every 6 months for most patients. Some conditions require more frequent visits.
+
+### Law Firm (PI)-Specific
+- "What does it cost to hire you?" → Nothing upfront. We work on contingency — you only pay if we win.
+- "How long does a personal injury case take?" → Varies, but most settle in 6-18 months. We'll give you a realistic timeline.
+- "Should I talk to the insurance company?" → No — contact us first. Insurance adjusters work for the insurance company, not you.
+- "What is my case worth?" → Depends on injuries, medical bills, lost wages, and impact on your life. Free consultation to assess.
+
+### Auto Repair-Specific
+- "Do you give written estimates?" → Always. We get your approval before doing any work.
+- "Are your mechanics certified?" → Yes, ASE-certified technicians on staff.
+- "Do you offer a warranty on repairs?" → Yes — [X] months / [X] miles on all parts and labor.
+- "Can you work on my car's make/model?" → We work on all makes and models, domestic and import.
+
+---
+
+## COMPLETE SECTION ORDER (Every Generated Site)
+
+Always build in this exact order for maximum conversion flow:
+
+```
+1.  <head> — meta, schema, Tailwind CDN, fonts, custom CSS
+2.  Sticky Nav — logo + links + phone CTA + hamburger
+3.  Hero — gradient, headline, CTA buttons, trust badges, Google Reviews badge
+4.  Stats Bar — animated counters on dark background
+5.  Services — card grid with icons
+6.  About — text + stats + team visual + license badge
+7.  Why Choose Us — 4-item bento or icon grid
+8.  Testimonials — 3 cards with stars and names
+9.  Service Area — map embed + nearby city list
+10. FAQ — 6-8 questions with smooth accordion
+11. CTA Banner — gradient, large phone, get quote
+12. Contact — info left + form right
+13. Footer — NAP + quick links + service list + copyright
+14. Sticky Mobile Call Bar — fixed bottom, mobile only
+15. Scripts — menu, reveal observer, counter observer, FAQ, sticky header
+```
+
+---
+
 ## HTML FILE SAVE PATH
 
 Always save generated websites to:

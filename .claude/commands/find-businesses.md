@@ -9,41 +9,84 @@ Extract:
 - **Niche** — if not specified, default to searching ALL high-value niches below
 - **Limit** — default to top 10 most desperate leads
 
-## High-Value Niches (Prioritized)
+---
+
+## High-Value Niches (Ranked by Website Quality Gap)
 
 These businesses historically have the worst websites and highest ROI for a redesign:
-1. Plumbers
-2. HVAC / Heating & Cooling
-3. Electricians
-4. Roofers
-5. Landscapers / Lawn Care
-6. Pest Control
-7. Chiropractors
-8. Dentists
-9. Auto Repair Shops
-10. Law Firms (personal injury, family, criminal)
-11. Accountants / CPAs
-12. Insurance Agents
-13. Veterinarians
-14. General Contractors
-15. Pressure Washing / Window Cleaning
+
+| Rank | Niche | Why They're Great Targets |
+|------|-------|--------------------------|
+| 1 | Plumbers | 60%+ still on Wix/GoDaddy or sites from 2014. Emergency leads = huge ROI |
+| 2 | HVAC / Heating & Cooling | Seasonal urgency drives high-value jobs. Terrible web presence common |
+| 3 | Electricians | License-required = fewer competitors. Old sites common |
+| 4 | Roofers | High ticket ($8k-$30k jobs). Any lead = massive ROI |
+| 5 | Dentists | High LTV per patient. Often on outdated templates |
+| 6 | Chiropractors | Need new patients constantly. Small practices = bad sites |
+| 7 | Landscapers / Lawn Care | Very low web sophistication. Easy to impress |
+| 8 | Pest Control | Recurring revenue model. Operators not tech-savvy |
+| 9 | Auto Repair Shops | Independent shops vs chains. Old sites everywhere |
+| 10 | Law Firms (PI, Family, Criminal) | High fee per case. Many solo/small firms with bad sites |
+| 11 | Accountants / CPAs | Tax season urgency. Template sites common |
+| 12 | General Contractors | High-ticket remodels. Portfolio sites often outdated |
+| 13 | Veterinarians | High LTV. Small practices often neglect web |
+| 14 | Pressure Washing / Window Cleaning | Fast-growing niche. Operators are not designers |
+| 15 | Insurance Agents | Captive agents (State Farm, Allstate) = blank template sites |
+
+---
 
 ## Step 2 — Search for Businesses
 
-Use WebSearch with these queries:
-- `"[niche] [city]" site:google.com/maps` OR
-- `"[niche] near [city]" -yelp.com -angi.com -homeadvisor.com`
-- `"best [niche] in [city]"`
+Use WebSearch with these queries to find real local businesses:
 
-For each result, try to find:
+### Primary Search Queries (use these first)
+```
+"[niche] [city] [state]"
+"best [niche] in [city]"
+"[niche] near [city] [state]"
+"[niche] [city]" -yelp -angi -homeadvisor -thumbtack -houzz
+```
+
+### Google Maps Specific
+```
+"[niche] [city]" site:maps.google.com
+"[niche] in [city]" maps
+```
+
+### Find Weak Sites Specifically
+```
+"[niche] [city]" inurl:wix OR inurl:weebly OR inurl:godaddy
+"[niche] [city]" site:wixsite.com
+"[niche] [city]" site:squarespace.com
+```
+
+For each result, find:
 - Business name
 - Website URL
 - Google Maps / Google Business Profile URL
 - Phone number
-- Approximate rating (if visible)
-- Number of reviews (if visible)
+- Star rating and review count
 
-## Step 3 — Score Each Business (Opportunity Score)
+---
+
+## Step 3 — Identify Site Builder (Quick Platform Check)
+
+When you have their URL, scan for these signals to detect platform:
+
+| Platform | Dead giveaway |
+|----------|--------------|
+| Wix | `.wixsite.com` in URL, or `wix-code` in source |
+| Squarespace | `/squarespace-static/` in source, or URLs ending in `.squarespace.com` |
+| GoDaddy | `secureserver.net` or `godaddy.com` references in source |
+| Weebly | `weeblysite.com` domain or `weebly.com` in source |
+| WordPress | `wp-content/plugins/` or `wp-json` in source |
+| Custom/Hand-coded | Clean HTML, none of the above |
+
+**Wix/Squarespace/GoDaddy = automatic +10 points on opportunity score** (they're paying monthly for a worse product)
+
+---
+
+## Step 4 — Score Each Business (Opportunity Score)
 
 Score how desperately they need a new website. Higher = better prospect.
 
@@ -51,19 +94,36 @@ Score how desperately they need a new website. Higher = better prospect.
 |--------|--------|
 | Website loads slowly / feels old | +20 |
 | No mobile responsiveness | +20 |
+| No clear phone number above the fold | +15 |
 | Copyright year in footer is 3+ years old | +15 |
 | No testimonials / reviews section | +15 |
-| No clear phone number above the fold | +15 |
-| No services section | +10 |
 | No SSL (http:// not https://) | +15 |
-| 50+ Google reviews (established, worth investing) | +10 |
+| Site is on Wix, Squarespace, or GoDaddy builder | +10 |
+| No services section | +10 |
+| 50+ Google reviews (established, worth the investment) | +10 |
 | Rating 4.0+ stars (good service, just bad web presence) | +10 |
-| Niche on the high-value list above | +10 |
+| Niche on the high-value list above (top 5) | +10 |
 | Missing about section | +5 |
 | Broken images or links | +10 |
-| Website is clearly a free template (Wix, GoDaddy builder) | +10 |
 
-## Step 4 — Present Results
+---
+
+## Step 5 — Seasonal Targeting (Time Your Outreach Right)
+
+| Niche | Best Time to Target | Why |
+|-------|--------------------|----|
+| HVAC | March-April and September-October | Before summer/winter rush |
+| Landscaping | February-March | Before spring season |
+| Pest Control | March-May | Before pest season |
+| Roofers | March-April and after storms | Storm season leads |
+| Plumbers | Year-round, spike in winter | Frozen pipes in winter |
+| Accountants | October-January | Before tax season |
+| Dentists | January (new year, new insurance) | Benefits reset |
+| Contractors | January-February | Planning season |
+
+---
+
+## Step 6 — Present Results
 
 Output a clean table like this:
 
@@ -72,24 +132,42 @@ Output a clean table like this:
 
 | # | Business | Website | Google Profile | Rating | Reviews | Score | Why They Need Help |
 |---|----------|---------|---------------|--------|---------|-------|-------------------|
-| 1 | Smith Plumbing | http://smithplumbing.com | [Maps Link] | 4.7⭐ | 87 | 85 | No mobile, 2014 design, no testimonials |
-| 2 | Joe's HVAC | https://joeshvac.net | [Maps Link] | 4.2⭐ | 43 | 70 | Wix template, no services section |
+| 1 | Smith Plumbing | http://smithplumbing.com | [Maps Link] | 4.7⭐ | 87 | 85 | Wix site, no mobile, 2014 design |
+| 2 | Joe's HVAC | https://joeshvac.net | [Maps Link] | 4.2⭐ | 43 | 70 | No testimonials, GoDaddy builder |
 ...
+
+💡 Tip: #1 and #2 are hot leads — they have the reviews to justify investing in a real site.
 ```
 
 Always include BOTH:
-1. The website URL (so we can scrape it)
-2. The Google Maps/Business Profile URL (so the user can verify it's real)
+1. The **website URL** (so we can scrape it)
+2. The **Google Maps/Business Profile URL** (so the user can verify it's real)
 
-## Step 5 — Ask User to Choose
+---
+
+## Step 7 — Ask User to Choose
 
 After presenting the table, say:
-> "Which of these would you like me to build a new website for? Just give me the number or name, and I'll scrape their current site and generate a complete modern redesign as an HTML file."
+> "Which of these would you like me to build a new website for? Just give me the number or name, and I'll scrape their current site and generate a complete modern redesign as an HTML file you can preview by dragging to netlify.com/drop."
+
+---
+
+## Finding the Business Owner
+
+After user picks a business, try to find the owner's contact:
+1. **Google the business name + "owner"** — often shows in news/press
+2. **LinkedIn search** — "[Business Name] [City]"
+3. **Google Maps "About" tab** — sometimes lists owner name
+4. **Their website's About page** — usually has team names
+5. **Facebook Business Page** — "About" section often has owner name
+
+---
 
 ## Important Rules
 
 - SKIP national chains (Roto-Rooter, Servpro, Aspen Dental, etc.)
-- SKIP businesses with no website at all (harder to pitch)
+- SKIP businesses with no website at all (harder pitch — start with people who value web presence)
 - SKIP businesses with clearly modern websites (already have good web presence)
 - PRIORITIZE businesses with 4+ stars but old/bad websites — they have good service, just need marketing help
-- Always show the Google Profile URL so the user can verify the business is real before spending time on it
+- ALWAYS show the Google Profile URL so the user can verify the business is real
+- NOTE if a business is on Wix/Squarespace — that's a strong pitch angle ("stop renting your website")

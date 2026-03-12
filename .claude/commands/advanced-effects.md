@@ -501,6 +501,144 @@ window.addEventListener('scroll', () => {
 
 ---
 
+## STICKY MOBILE CALL BAR (Highest ROI addition to any local biz site)
+```html
+<!-- Add just before </body> — mobile only, always visible at bottom -->
+<div class="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+  <div class="grid grid-cols-2 h-16">
+    <a href="tel:[PHONE]"
+      class="flex items-center justify-center gap-2 bg-primary text-white font-bold text-sm active:opacity-80 transition-opacity">
+      <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+      </svg>
+      Call Now
+    </a>
+    <a href="#contact"
+      class="flex items-center justify-center gap-2 bg-gray-900 text-white font-bold text-sm active:opacity-80 transition-opacity">
+      <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.628 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+      </svg>
+      Free Quote
+    </a>
+  </div>
+</div>
+<!-- Spacer so footer content isn't hidden behind bar -->
+<div class="h-16 md:hidden"></div>
+```
+
+---
+
+## TESTIMONIAL AUTO-SCROLL CAROUSEL
+```html
+<div class="relative overflow-hidden" id="testimonial-carousel">
+  <div class="flex gap-6 transition-transform duration-500 ease-in-out" id="carousel-track">
+    <!-- Testimonial card — repeat 3-5x -->
+    <div class="min-w-[320px] md:min-w-[380px] bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex-shrink-0">
+      <div class="flex text-yellow-400 text-xl mb-4">★★★★★</div>
+      <p class="text-gray-700 leading-relaxed mb-6 italic">"[TESTIMONIAL TEXT]"</p>
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+          [INITIAL]
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900 text-sm">[NAME]</p>
+          <p class="text-xs text-gray-500">[CITY] Resident</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Prev/Next buttons -->
+  <button onclick="moveCarousel(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:bg-gray-50 z-10">‹</button>
+  <button onclick="moveCarousel(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:bg-gray-50 z-10">›</button>
+</div>
+<script>
+let carouselIndex = 0;
+function moveCarousel(dir) {
+  const track = document.getElementById('carousel-track');
+  const cards = track.children;
+  const cardWidth = cards[0].offsetWidth + 24; // gap-6 = 24px
+  carouselIndex = Math.max(0, Math.min(carouselIndex + dir, cards.length - 1));
+  track.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
+}
+// Auto-advance every 5 seconds
+setInterval(() => {
+  const track = document.getElementById('carousel-track');
+  const max = track.children.length - 1;
+  if (carouselIndex >= max) carouselIndex = -1;
+  moveCarousel(1);
+}, 5000);
+</script>
+```
+
+---
+
+## IMAGE BLUR-UP LAZY LOAD (smooth placeholder → real image)
+```html
+<style>
+.blur-load {
+  filter: blur(10px);
+  transition: filter 0.4s ease;
+}
+.blur-load.loaded {
+  filter: blur(0);
+}
+</style>
+
+<div class="aspect-video rounded-2xl overflow-hidden bg-gray-100">
+  <img
+    src="[ACTUAL_IMAGE_URL]"
+    alt="[ALT TEXT]"
+    class="blur-load w-full h-full object-cover"
+    loading="lazy"
+    onload="this.classList.add('loaded')"
+  />
+</div>
+```
+
+---
+
+## ACTIVE NAV LINK HIGHLIGHT ON SCROLL
+```html
+<script>
+// Highlight nav link as user scrolls through sections
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('text-primary', link.getAttribute('href') === '#' + id);
+        link.classList.toggle('font-bold', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.5 });
+
+sections.forEach(s => sectionObserver.observe(s));
+</script>
+```
+
+---
+
+## PULSING PHONE NUMBER (draws attention on mobile)
+```html
+<style>
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(var(--primary-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0); }
+}
+.pulse { animation: pulse-ring 2s infinite; }
+</style>
+<a href="tel:[PHONE]" class="pulse inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-full">
+  📞 [PHONE]
+</a>
+```
+
+---
+
 ## TOP GITHUB RESOURCES TO KNOW
 
 | Repo | Stars | What To Use From It |

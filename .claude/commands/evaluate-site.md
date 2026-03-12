@@ -1,43 +1,135 @@
 # Evaluate a Business Website
+# Given a URL, score opportunity and generate a pitch. Higher score = better prospect.
 
-Given a business name and URL, evaluate whether it's worth targeting for a website rebuild.
+## Scoring System (0-100+)
 
-## Instructions:
+### Technical Issues
+| Signal | Points |
+|--------|--------|
+| No mobile responsiveness (no viewport meta, or breaks at 375px) | +20 |
+| No SSL — site is http:// not https:// | +15 |
+| Design looks 5+ years old (table layout, GIF backgrounds, no flexbox/grid) | +15 |
+| Footer copyright year is 3+ years old | +10 |
+| Site loads slowly (lots of images, no lazy loading, heavy page) | +10 |
+| Broken images or 404 links visible | +10 |
+| Site is clearly a free page builder (see detection guide below) | +10 |
 
-1. Visit the URL (if possible) and assess:
-   - Mobile responsiveness
-   - Load time / performance feel
-   - Design age (estimate year the design is from)
-   - Presence of: hero section, services, about, testimonials, contact form, phone number
-   - SSL certificate
-   - Copyright year in footer
+### Missing Conversion Elements
+| Signal | Points |
+|--------|--------|
+| No clear CTA above the fold | +15 |
+| No phone number visible in header | +15 |
+| No testimonials or reviews section | +15 |
+| No contact form | +10 |
+| No services section | +10 |
+| No About section | +5 |
+| No hours of operation listed | +5 |
 
-2. Score it 1-100 (higher = better opportunity):
-   - +20 if no mobile responsiveness
-   - +15 if no testimonials section
-   - +15 if no clear CTA above fold
-   - +10 if design looks 5+ years old
-   - +10 if no contact form
-   - +10 if no SSL (http://)
-   - +5 if footer copyright year is 3+ years old
-   - +5 if broken images detected
-   - +5 if no about section
+### Business Opportunity Signals
+| Signal | Points |
+|--------|--------|
+| 4.0+ star rating with 50+ reviews (good service, bad web presence) | +15 |
+| High-value niche (plumber, HVAC, roofing, dental, law) | +10 |
+| Business in operation 5+ years (investment-worthy) | +5 |
+| Appears to not rank on Google for "[niche] [city]" keyword | +15 |
 
-3. Output format:
+---
+
+## Site Builder Detection Guide
+
+Knowing what platform they're on helps estimate build cost and pitch angle.
+
+| Platform | How to Detect | Pitch Angle |
+|----------|--------------|-------------|
+| **Wix** | URL contains `.wixsite.com` OR source has `wix-code` or `_wixCIDX` | "Your Wix site limits your SEO — here's what a custom site gets you" |
+| **Squarespace** | Source contains `squarespace.com/static` or `sqsp.net` | "Squarespace charges $25+/month — own your site instead" |
+| **GoDaddy Builder** | Source has `godaddy.com/website/builder` or `secureserver.net` | "GoDaddy builder sites rank poorly — here's proof" |
+| **Weebly** | Source has `weebly.com` or `weeblysite.com` | Same as above |
+| **Jimdo** | Source has `jimdo.com` or `jimdofree.com` | Same |
+| **WordPress (hosted)** | Source has `wp-content/` — note: WP sites need pitch adjusted | "Your WordPress site looks dated — here's a modern redesign" |
+| **Custom / Hand-coded** | None of the above, usually cleaner HTML | Standard pitch |
+
+---
+
+## Niche-Specific Issues to Look For
+
+### Plumbers / HVAC / Electricians
+- Emergency service number NOT prominently displayed (huge miss — 40% of calls are emergencies)
+- No "Available 24/7" messaging
+- No service area map or city list
+- Missing license/certification number
+
+### Roofers / Contractors
+- No before/after photo gallery
+- No financing options mentioned
+- No warranty information
+- No local insurance/bonding info
+
+### Dentists / Chiropractors
+- No online booking or scheduling link
+- No insurance accepted list
+- No team/doctor photo
+- No new patient special or offer
+
+### Law Firms
+- No free consultation offer above fold
+- No case results or settlements mentioned
+- No attorney bio with photo
+- No practice area pages
+
+### Auto Repair
+- No price transparency (oil change, brake, etc.)
+- No ASE certification badge
+- No warranty mention
+- No loaner car / shuttle service info
+
+---
+
+## Output Format
+
 ```
 Business: [name]
 URL: [url]
-Opportunity Score: [1-100]
-Design Age: ~[year]
-Missing:
-  - [list what's missing]
-Issues:
-  - [list technical issues]
-Verdict: [HOT LEAD / WARM LEAD / SKIP]
-Pitch angle: [one sentence on how to approach them]
+Opportunity Score: [1-100+]
+Platform: [Wix / Squarespace / WordPress / Custom / Unknown]
+Design Age: ~[year estimate]
+
+Missing Elements:
+  ❌ [list each missing conversion element]
+
+Technical Issues:
+  🔧 [list technical problems]
+
+Niche-Specific Gaps:
+  ⚠️ [list industry-specific misses]
+
+Verdict: [🔥 HOT LEAD / 🌡️ WARM LEAD / ⏭️ SKIP]
+
+Pitch Angle:
+  "[One specific sentence about what their site is missing that costs them customers]"
+
+Best Outreach Channel: [Cold email / Cold call / In-person / LinkedIn]
 ```
 
-## Quick verdict guide:
-- 60+ → HOT LEAD — scrape and generate immediately
-- 30-59 → WARM LEAD — worth pursuing, queue for generation
-- <30 → SKIP — their site is already decent
+---
+
+## Verdict Guide
+
+| Score | Verdict | Action |
+|-------|---------|--------|
+| 70+ | 🔥 HOT LEAD | Scrape and generate NOW — this is money |
+| 40-69 | 🌡️ WARM LEAD | Worth doing — queue for generation |
+| 20-39 | ⏭️ SOFT PASS | Might work — depends on niche and reviews |
+| <20 | ❌ SKIP | Their site is decent enough they won't buy |
+
+---
+
+## Quick Evaluation (No WebFetch Needed)
+
+If you can only see the URL and Google listing, use these fast signals:
+
+1. **Google Maps photo count** — fewer than 5 photos = outdated operator
+2. **Last review date** — active business + old site = perfect prospect
+3. **Website listed on GMB?** — if no website shown = even bigger opportunity
+4. **Google "site:domain.com"** — if only 1-2 indexed pages = terrible SEO
+5. **Check footer on homepage** — copyright year tells you everything

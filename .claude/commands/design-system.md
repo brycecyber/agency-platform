@@ -470,15 +470,104 @@ Google Fonts URL: https://fonts.googleapis.com/css2?family=DM+Serif+Display&fami
 
 ---
 
+### About Section
+```html
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Text Side -->
+    <div>
+      <p class="text-primary font-semibold text-sm uppercase tracking-widest mb-3">About Us</p>
+      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6">
+        [CITY]'s Trusted [NICHE] Since [YEAR]
+      </h2>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        [2-3 sentences about the business: when founded, who runs it, what makes them different, their service area commitment.]
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-8">
+        [1-2 sentences about their values: licensed, insured, customer-first, etc.]
+      </p>
+      <!-- Stats row -->
+      <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-100">
+        <div class="text-center">
+          <div class="text-3xl font-black text-primary mb-1" data-target="[YEARS]" data-suffix="+">0</div>
+          <div class="text-sm text-gray-500">Years in Business</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-primary mb-1" data-target="[CUSTOMERS]" data-suffix="+">0</div>
+          <div class="text-sm text-gray-500">Happy Customers</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-primary mb-1">[RATING]⭐</div>
+          <div class="text-sm text-gray-500">Google Rating</div>
+        </div>
+      </div>
+    </div>
+    <!-- Visual Side -->
+    <div class="space-y-4">
+      <!-- Photo or gradient card -->
+      <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+        <img src="[TEAM_PHOTO_OR_PLACEHOLDER]" alt="[BUSINESS NAME] team" class="w-full h-full object-cover" loading="lazy"/>
+      </div>
+      <!-- Highlight badges -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3">
+          <span class="text-2xl">🛡️</span>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">Licensed & Insured</p>
+            <p class="text-xs text-gray-500">License #[LICENSE]</p>
+          </div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4 flex items-center gap-3">
+          <span class="text-2xl">🏆</span>
+          <div>
+            <p class="font-semibold text-gray-900 text-sm">BBB Accredited</p>
+            <p class="text-xs text-gray-500">A+ Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+### Sticky Mobile Call Bar (CRITICAL — add to every site)
+```html
+<!-- Sticky bottom bar — mobile only, always visible -->
+<div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 shadow-2xl">
+  <div class="grid grid-cols-2">
+    <a href="tel:[PHONE]"
+      class="flex items-center justify-center gap-2 py-4 bg-primary text-white font-bold text-sm">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+      </svg>
+      Call Now
+    </a>
+    <a href="#contact"
+      class="flex items-center justify-center gap-2 py-4 bg-gray-900 text-white font-bold text-sm">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+      </svg>
+      Free Quote
+    </a>
+  </div>
+</div>
+<!-- Add padding so last section doesn't hide behind bar on mobile -->
+<div class="h-16 md:hidden"></div>
+```
+
+---
+
 ## Design Rules — Always Follow These
 
-1. Phone number must appear in: NAV, HERO (as primary CTA), CTA BANNER, CONTACT section, FOOTER
-2. Every page must have EXACTLY ONE primary color CTA above the fold
-3. Use `hover:-translate-y-1 transition-all duration-300` on service cards for interactivity
-4. Use `scroll-behavior: smooth` always
-5. Mobile hamburger menu is required
-6. Google Fonts loaded via preconnect for performance
-7. All images use `object-cover` to prevent distortion
-8. Use emoji as decorative icons — they load faster than icon fonts
-9. Form submit shows an alert (since there's no backend) — "Thanks! We'll be in touch within 24 hours."
+1. Phone number must appear in: NAV, HERO (as primary CTA), CTA BANNER, CONTACT section, FOOTER (minimum 4×)
+2. Add the **sticky mobile call bar** to EVERY generated site — it's the #1 mobile conversion tool
+3. Every page must have EXACTLY ONE primary color CTA above the fold
+4. Use `hover:-translate-y-1 transition-all duration-300` on service cards for interactivity
+5. Use `scroll-behavior: smooth` always
+6. Mobile hamburger menu is required and functional
+7. Google Fonts loaded via preconnect for performance
+8. All images use `object-cover` to prevent distortion
+9. Form submit shows an alert (no backend) — "Thanks! We'll be in touch within 24 hours."
 10. All external links use `target="_blank" rel="noopener"`
+11. Add `class="reveal"` to every section for scroll-triggered fade-in
+12. Use Heroicons SVG icons in contact/footer instead of emoji for professional look
