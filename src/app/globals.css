@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+  }
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: #030712;
+  color: #f9fafb;
+}
+
+.card {
+  @apply bg-gray-900 border border-gray-800 rounded-xl;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-800 hover:bg-gray-700 text-gray-200 px-4 py-2 rounded-lg text-sm font-medium transition-colors;
+}
+
+.badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-discovered { @apply bg-gray-800 text-gray-300; }
+.badge-scraping { @apply bg-blue-900/50 text-blue-300; }
+.badge-scraped { @apply bg-yellow-900/50 text-yellow-300; }
+.badge-generating { @apply bg-purple-900/50 text-purple-300; }
+.badge-generated { @apply bg-green-900/50 text-green-300; }
+.badge-deployed { @apply bg-emerald-900/50 text-emerald-300; }
+.badge-error { @apply bg-red-900/50 text-red-300; }
+.badge-rejected { @apply bg-gray-800 text-gray-500; }
