@@ -39,6 +39,38 @@ Based on the business niche, choose from master-design.md color palette:
 
 ---
 
+## Step 2b — Image Strategy
+
+Use real scraped images first. When none are available, use LoremFlickr placeholder URLs:
+
+```
+https://loremflickr.com/1200/800/[keyword]
+```
+
+**Keyword by niche:**
+| Niche | Hero Image URL | About/Team URL |
+|-------|---------------|----------------|
+| Plumber | `https://loremflickr.com/1200/800/plumber` | `https://loremflickr.com/600/400/plumbing` |
+| HVAC | `https://loremflickr.com/1200/800/hvac,technician` | `https://loremflickr.com/600/400/airconditioning` |
+| Electrician | `https://loremflickr.com/1200/800/electrician` | `https://loremflickr.com/600/400/electrical` |
+| Roofer | `https://loremflickr.com/1200/800/roofing` | `https://loremflickr.com/600/400/roof` |
+| Landscaping | `https://loremflickr.com/1200/800/landscaping` | `https://loremflickr.com/600/400/garden` |
+| Dentist | `https://loremflickr.com/1200/800/dentist` | `https://loremflickr.com/600/400/dental` |
+| Chiropractor | `https://loremflickr.com/1200/800/chiropractic` | `https://loremflickr.com/600/400/spine` |
+| Auto Repair | `https://loremflickr.com/1200/800/mechanic` | `https://loremflickr.com/600/400/autorepair` |
+| Pest Control | `https://loremflickr.com/1200/800/exterminator` | `https://loremflickr.com/600/400/pestcontrol` |
+| Law Firm | `https://loremflickr.com/1200/800/lawyer` | `https://loremflickr.com/600/400/attorney` |
+
+**IMPORTANT:** Always add `loading="lazy"` to all images below the fold. Add `loading="eager"` to the hero image only.
+
+When you use placeholder images, add an HTML comment noting they should be replaced:
+```html
+<!-- TODO: Replace with real team/business photos before sending to client -->
+<img src="https://loremflickr.com/1200/800/plumber" alt="Smith Plumbing team" loading="eager" class="w-full h-full object-cover">
+```
+
+---
+
 ## Step 3 — Fill in the Content
 
 Use REAL scraped content everywhere possible. If data is missing, use these niche defaults:
